@@ -1,0 +1,12 @@
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
+
+out
+*.db
+.env
+assets/
+samples/
+vendor/
