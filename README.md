@@ -101,8 +101,6 @@ We welcome contributions! To get started:
 4. Push to your fork: `git push origin feature/your-feature`
 5. Open a Pull Request.
 
-Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
-
 ---
 
 ## 📄 License
