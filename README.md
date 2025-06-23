@@ -3,7 +3,7 @@
 [![Go Version](https://img.shields.io/badge/Go-1.21%2B-blue.svg)](https://golang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-Tubely is a modern SaaS platform designed for YouTubers to efficiently manage, store, and serve their video assets. Built with Go and AWS S3, Tubely ensures robust, scalable, and high-performance file management for creators of all sizes.
+Tubely is a modern SaaS platform designed for Creators to efficiently manage, store, and serve their video assets. Built with Go and AWS S3, Tubely ensures robust, scalable, and high-performance file management for creators of all sizes.
 
 ---
 
