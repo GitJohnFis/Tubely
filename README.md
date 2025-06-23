@@ -1,69 +1,119 @@
 # Tubely
-Tubely is a cutting-edge SaaS platform designed to help YouTubers efficiently manage their video assets. By leveraging AWS S3 and Go, Tubely provides robust solutions for storing, serving, and managing large files, ensuring optimal performance and scalability.
 
-# learn-file-storage-s3-golang-starter (Tubely)
-![Whisk_e417a89990](https://github.com/user-attachments/assets/0fad2c14-8d2a-42f6-a010-9559c21a1955)
+[![Go Version](https://img.shields.io/badge/Go-1.21%2B-blue.svg)](https://golang.org/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-This repo contains the starter code for the Tubely application - the #1 tool for engagement bait - for the "Learn File Storage" [course](https://boot.dev/courses/learn-file-storage-golang) on [boot.dev](https://boot.dev)
+Tubely is a modern SaaS platform designed for Creators to efficiently manage, store, and serve their video assets. Built with Go and AWS S3, Tubely ensures robust, scalable, and high-performance file management for creators of all sizes.
 
-## Quickstart
+---
 
-*This is to be used as a *reference\* in case you need it, you should follow the instructions in the course rather than trying to do everything here.
+## 🚀 Features
 
-## 1. Install dependencies
+-   **Efficient Asset Management:** Upload, organize, and serve large video and image files.
+-   **AWS S3 Integration:** Secure, scalable cloud storage for all your assets.
+-   **Built with Go:** Fast, reliable backend for optimal performance.
+-   **Easy Setup:** Minimal configuration to get started.
+-   **Open Source:** Contributions welcome!
 
-- [Go](https://golang.org/doc/install)
-- `go mod download` to download all dependencies
-- [FFMPEG](https://ffmpeg.org/download.html) - both `ffmpeg` and `ffprobe` are required to be in your `PATH`.
+---
+
+## 📦 Quickstart
+
+### 1. Prerequisites
+
+-   [Go](https://golang.org/doc/install) (v1.21+)
+-   [FFMPEG](https://ffmpeg.org/download.html) (`ffmpeg` and `ffprobe` in your `PATH`)
+-   [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+-   [SQLite 3](https://www.sqlite.org/download.html) (optional, for manual DB inspection)
+
+### 2. Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-# linux
-sudo apt update
-sudo apt install ffmpeg
-
-# mac
-brew update
-brew install ffmpeg
+git clone https://github.com/your-repo/tubely.git
+cd tubely
+go mod download
 ```
 
-- [SQLite 3](https://www.sqlite.org/download.html) only required for you to manually inspect the database.
+Install FFMPEG and SQLite3:
 
 ```bash
-# linux
+# Linux
 sudo apt update
-sudo apt install sqlite3
+sudo apt install ffmpeg sqlite3
 
-# mac
+# macOS
 brew update
-brew install sqlite3
+brew install ffmpeg sqlite3
 ```
 
-- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-
-## 2. Download sample images and videos
+### 3. Download Sample Assets
 
 ```bash
 ./assetdownload.sh
-# samples/ dir will be created
-# with sample images and videos
+# Creates a samples/ directory with sample images and videos
 ```
 
-## 3. Configure environment variables
+### 4. Configure Environment Variables
 
-Copy the `.env.example` file to `.env` and fill in the values.
+Copy the example environment file and update as needed:
 
 ```bash
 cp .env.example .env
+# Edit .env with your AWS and app credentials
 ```
 
-You'll need to update values in the `.env` file to match your configuration, but _you won't need to do anything here until the course tells you to_.
-
-## 3. Run the server
+### 5. Run the Server
 
 ```bash
 go run .
 ```
 
-- You should see a new database file `tubely.db` created in the root directory.
-- You should see a new `assets` directory created in the root directory, this is where the images will be stored.
-- You should see a link in your console to open the local web page.
+-   A new `tubely.db` database and `assets` directory will be created.
+-   Visit the link in your console to access the local web page.
+
+---
+
+## 🛠️ Usage Example
+
+Upload a video asset via the API:
+
+```bash
+curl -X POST -F "file=@/path/to/video.mp4" http://localhost:8080/upload
+```
+
+List all uploaded assets:
+
+```bash
+curl http://localhost:8080/assets
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To get started:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Make your changes and commit: `git commit -m 'Add new feature'`
+4. Push to your fork: `git push origin feature/your-feature`
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙋‍♂️ Support & Community
+
+-   [Boot.dev Course](https://boot.dev/courses/learn-file-storage-golang)
+-   [Open an Issue](https://github.com/your-repo/tubely/issues) for bugs or feature requests.
+
+---
+
+> Tubely: Empowering YouTubers with scalable, open source asset management solutions.
