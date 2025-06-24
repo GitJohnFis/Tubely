@@ -1,0 +1,40 @@
+milestones:
+  - title: Project Initialization & Basic Setup
+    description: >
+      Set up version control, basic project structure, and essential developer tooling. Add a README and initial documentation.
+    order: 1
+
+  - title: Core Backend API & Database
+    description: >
+      Design and implement the primary database schema and backend API with user authentication and CRUD functionality.
+    order: 2
+
+  - title: Essential Frontend & User Flows
+    description: >
+      Build the initial frontend, focusing on user registration/login and core resource management. Connect frontend to backend.
+    order: 3
+
+  - title: Media Handling & User Experience
+    description: >
+      Add image/media upload support, improve UX, and allow users to manage their profiles.
+    order: 4
+
+  - title: Security, Roles, and Permissions
+    description: >
+      Implement user roles, permissions, password reset, email verification, and robust authentication logging.
+    order: 5
+
+  - title: Advanced Features & Optimization
+    description: >
+      Introduce social features (comments, likes), improve search/filtering, and optimize app performance.
+    order: 6
+
+  - title: Deployment, Monitoring, and Documentation
+    description: >
+      Set up CI/CD pipelines, monitoring, and logging. Update deployment and usage documentation.
+    order: 7
+
+  - title: Polishing & Community
+    description: >
+      Refine UI/UX, add accessibility/internationalization, and grow community contributions with clear guidelines and a roadmap.
+    order: 8
