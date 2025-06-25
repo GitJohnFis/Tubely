@@ -10,15 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Go
-      uses: actions/setup-go@v5
-      with:
-        go-version: '1.22'
-
-    - name: Install dependencies
-      run: go mod tidy
-
-    - name: Run tests
-      run: go test ./...
+      - uses: actions/checkout@v3
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21' # Adjust to the Go version used by Tubely
+      - name: Install dependencies
+        run: go mod download
+      - name: Run tests
+        run: go test ./... -v
